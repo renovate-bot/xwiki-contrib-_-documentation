@@ -280,7 +280,7 @@
       <unmodifiable>0</unmodifiable>
       <validationMessage/>
       <validationRegExp/>
-      <values>conversionToMacro=Conversion to macro|conversionToSyntax=Conversion to syntax|bridge=Bridge|placeholder=Placeholder|shallow=Shallow|drop=Drop</values>
+      <values>conversionToMacro=Equivalent macro|conversionToSyntax=Conversion to syntax|bridge=Bridge|placeholder=Placeholder|shallow=Shallow|drop=Drop</values>
       <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
     </handling>
     <handlingDetails>
