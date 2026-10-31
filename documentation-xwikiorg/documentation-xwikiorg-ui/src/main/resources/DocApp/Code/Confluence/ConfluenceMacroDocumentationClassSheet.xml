@@ -258,6 +258,8 @@
   #if ($macroObj != $NULL)
     #set($class = $macroObj.xWikiClass)
     #if ($xcontext.action == 'edit')
+      {{info}}For a more detailed and holistic view of how to fill in the information below, see the [[Confluence Macro Documentation Class Documentation&gt;&gt;DocApp.Code.Confluence.ConfluenceMacroDocumentationClassDocumentation]].{{/info}}
+
       {{html clean="false"}}
         &lt;div class="xform confluenceMacroDocEdit" &gt;
           #set ($linkPropertiesMap = {

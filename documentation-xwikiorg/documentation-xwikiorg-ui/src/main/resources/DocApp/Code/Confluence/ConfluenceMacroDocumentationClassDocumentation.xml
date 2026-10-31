@@ -1,0 +1,85 @@
+<?xml version="1.1" encoding="UTF-8"?>
+
+<!--
+ * See the NOTICE file distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ *
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+-->
+
+<xwikidoc version="1.6" reference="DocApp.Code.Confluence.ConfluenceMacroDocumentationClassDocumentation" locale="">
+  <web>DocApp.Code.Confluence</web>
+  <name>ConfluenceMacroDocumentationClassDocumentation</name>
+  <language/>
+  <defaultLanguage/>
+  <translation>0</translation>
+  <creator>xwiki:XWiki.Admin</creator>
+  <parent>DocApp.Code.Confluence.WebHome</parent>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
+  <version>1.1</version>
+  <title>Confluence Macro Documentation Class Documentation</title>
+  <comment/>
+  <minorEdit>false</minorEdit>
+  <syntaxId>xwiki/2.1</syntaxId>
+  <hidden>true</hidden>
+  <content>The Confluence Macro Documentation entries should be used and read as follows:
+
+* There should be one page per migration of macro - if there are multiple migrations of the same macro, provided by different migration modules, there should be multiple pages with documentation, organized in different documentation collections (grouped by module, etc.).
+* **Confluence ID**, **User-friendly macro name** and **Confluence documentation URL** describe the Confluence macro.
+* **How this Confluence macro is imported in XWiki** describes how the documented migration is transformed into an XWiki equivalent and there are 2 major categories here:
+** either we consider that we do have an equivalent macro in XWiki and we convert to that macro;
+** ether we consider that a perfect equivalent macro does not exist, and we convert to some sort of alternative: either to an XWiki syntax that provides the same purpose, either a bridge macro, or some shallow macro etc.
+** No handling here means that the default behavior of the migration will be used (which is to keep a macro call in the page, with the name ##confluence_&lt;macroid&gt;## and all parameters and their values from Confluence) and this macro //does not exist// (for the case when the macro exists - for example, as a bridge - the according option should be chosen).
+* The value of **How this Confluence macro is imported in XWiki** also determines how the next fields will be filled in:
+** if there is a macro implementation in XWiki (equivalent macro, or bridge, or a shallow macro, etc.), then the Import target and Required for usage sections will need to be filled in (see below how);
+** when there is no macro implementation (conversion to syntax, or no handling) or when the macro is not a perfect equivalent (bridge, shallow, etc.), the Alternative feature section is expected to be filled in (see below how).
+* **Import target** section describes //the XWiki macro to which the Confluence macro is migrated//, for all the cases for which such a macro exists (be it an equivalent or a bridge, etc.)
+** its id needs to be provided, along with an optional user friendly name; the user friendly name is particularly interesting for the cases when it's not really matching the id
+** a link to the documentation of this macro should also be provided (see below the description of how to provide the documentation link).
+** This field can be multivalued, in case the conversion can result in multiple macro calls in XWiki, based on parameters or other things; if this is the case, a description of what macro is used when is expected in the field **Import handling details**.
+* **Required for usage** section describes the extension that needs to be present in XWiki (installed as an additional thing or coming bundled with XWiki Standard) in order for the macro designated at **Import target** to work on the pages on which it's present in the wiki. Also, if the conversion is to a feature that requires some extension to be installed in order for it to work, that extension should also be named here.
+** an extension id needs to be provided, with an optional pretty name (but strongly encouraged, especially for items that are not part of the standard distribution);
+** a link to the documentation of the extension should also be provided (see below how). Many times, this documentation link will be duplicated with the Import target documentation link, but not always: for example, if an XWiki macro is part of an extension, in this section you'd provide the link to the whole extension while in the Import target you'd provide a link to the specific section that describes that macro.
+** multiple values can be provided here, if multiple extensions are required //and they don't depend on each other//: don't use this section to repeat dependencies of extensions, but if there are two or more extensions that need to be present for the result of the conversion to work fine, and there is no dependency relation, they need to be named all here.
+* **Required for import:** similar to the Required for usage, this section describes the extension that ensures the actual conversion of the Confluence macro into its XWiki corresponding feature, regardless of which one it is. It should be filled in for all macros that have some sort of handling at migration, even if it's a default feature of the standard migrator, but //especially if it is not// and an additional module needs to be installed.
+** as usual, an extension id, name and documentation link needs to be provided.
+* **Required for usage vs. Required for import:** the nuance between the 2 is that the extension that is //required for usage needs to stay installed on the XWiki instance for as long as there is content on that instance that uses the feature that resulted from the migration// (be it a macro or some other type of feature), while //the extension that is required for import needs to be installed at the time of the migration, and once the migration has been completed, it can be uninstalled// with no consequences on the migrated content which will continue to work properly.
+* The **Alternative XWiki feature** documentation describes what can be used in XWiki in order to respond to the similar functional need, for all the Confluence macros for which there is no conversion to an equivalent macro (bridges, shallow macros, conversion to syntax or macros that are not migrated at all).
+** The idea of this section is that it should rather focus on the cases where a feature that is equivalent enough (for example, in terms of UX) exists in XWiki, but it's not provided by a macro, or another macro exists that is called by the bridge, etc.
+** We're not looking to provide an alternative at all cost here, the alternative should not be too far-fetched, especially for documentation of macros that have no handling (if any).
+** For the conversions to an equivalent macro, this section should not be filled in, as it would be redundant with the **Import target** documentation.
+** The name of the feature needs to be provided here, and, eventually, an extension id if it's provided by an extension (it can be a feature of standard XWiki); note that we don't want here the ids of the module(s) that provide that feature into XWiki (for example, for a feature of the syntax), but rather the id of an additional extension, if such an extension needs to be installed in order to have access to the alternative.
+* In the **Alternative XWiki feature comparison** section, a few words about how to approach the usage of the alternative feature coming from the Confluence environment are expected: if there are any specific things to convert in the processes, etc.
+** In this section we're not expecting a description of the XWiki feature - this is the role of the documentation link of the alternative feature - but how it compares to the Confluence macro described by the current page.
+* The section **Is the alternative XWiki feature fully covering the feature?** allows to synthetically express the "conclusion" of the comparison section - whether the changes of documentation process that are expected are high and significant use-cases may not be covered or not.
+* Finally, the **Import handling details** section should contain the specification of the conversion described by the field **How this Confluence macro is imported in XWiki**: what parameters are converted to what parameters in XWiki, if the conversion is towards syntax what syntax is being generated and how (based on the parameters), if there are Confluence parameters that are not handled on migration, etc.
+* The section **Additional information** is there for anything you think needs to be known about this conversion / import and you didn't find any section above to put it in.
+
+**3-fields documentation link**
+
+For all the fields in these entries for which a pointer to a documentation is expected (Import target, Required for usage / import, Alternative XWiki feature), you will find 3 fields:
+
+* documentation page,
+* documentation page anchor,
+* documentation URL.
+
+The need for these (and rule for filling them in) is the following, regardless of whether it's single value or multivalued:
+
+* if the documentation to link to is a page on the same XWiki instance where the macro reference entry is filled in, documentation page and anchor should be used, with XWiki references to the current XWiki instance;
+** for a multivalued field, the respective positions for the page and anchor should match (the first value in the page anchor field will be used as an anchor in the page that is the first value in the page field, the second value in the page anchor field will be used as an anchor in the page that is the second value in the page field, and so on).
+* if the documentation is outside this XWiki instance (another XWiki instance or some other web resource), the full URL should be provided in documentation URL.</content>
+</xwikidoc>
