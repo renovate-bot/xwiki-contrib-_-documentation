@@ -51,7 +51,7 @@
       <disabled>0</disabled>
       <hint>Additional information</hint>
       <name>additionalInfo</name>
-      <number>28</number>
+      <number>29</number>
       <prettyName>Additional information</prettyName>
       <script/>
       <unmodifiable>0</unmodifiable>
@@ -64,7 +64,7 @@
       <disabled>0</disabled>
       <hint>The name of the macro in Confluence</hint>
       <name>confluenceId</name>
-      <number>2</number>
+      <number>1</number>
       <picker>0</picker>
       <prettyName>Confluence ID</prettyName>
       <size>30</size>
@@ -80,7 +80,7 @@
       <name>confluenceURL</name>
       <number>3</number>
       <picker>0</picker>
-      <prettyName>Confluence Documentation URL</prettyName>
+      <prettyName>Confluence documentation URL</prettyName>
       <size>30</size>
       <unmodifiable>0</unmodifiable>
       <validationMessage/>
@@ -92,11 +92,11 @@
       <customDisplay/>
       <disabled>0</disabled>
       <editor>---</editor>
-      <hint>How this macro would be implemented in XWiki and comparison with the alternative feature</hint>
+      <hint>How the Confluence macro compares with the XWiki alternative feature, paths to (manual) replacement of the usage of the Confluence macro with the XWiki feature, etc.</hint>
       <name>correspondingXWikiFeature</name>
       <number>26</number>
       <picker>0</picker>
-      <prettyName>Alternative XWiki feature description</prettyName>
+      <prettyName>Alternative XWiki feature comparison</prettyName>
       <restricted>0</restricted>
       <rows>5</rows>
       <size>40</size>
@@ -112,11 +112,11 @@
       <disabled>0</disabled>
       <displayType>input</displayType>
       <freeText>allowed</freeText>
-      <hint>The extension id of a feature that should be used in XWiki for this feature regardless of the import. This should be only set if the value differs from "Import target XWiki ID" or for bridges to specify what the bridge uses and what to use in XWiki natively. You can give several comma-separated IDs.</hint>
+      <hint>The extension id of the feature that should be used in XWiki for this feature, regardless of the import, if the alternative feature is an extension. This should be only set if the value differs from "Import target XWiki ID" or for bridges to specify what the bridge uses and what to use in XWiki natively. Several values can be provided.</hint>
       <largeStorage>0</largeStorage>
       <multiSelect>1</multiSelect>
       <name>equivXWikiFeatureId</name>
-      <number>21</number>
+      <number>22</number>
       <picker>1</picker>
       <prettyName>Alternative XWiki feature extension ID</prettyName>
       <relationalStorage>0</relationalStorage>
@@ -137,11 +137,11 @@
       <disabled>0</disabled>
       <displayType>input</displayType>
       <freeText>allowed</freeText>
-      <hint>The name of a feature that should be used in XWiki for this feature regardless of the import. This should be only set if the value differs from "Import target XWiki name" or for bridges to specify what the bridge uses and what to use in XWiki natively. You can give several comma-separated names.</hint>
+      <hint>The name of the feature that should be used in XWiki for this feature regardless of the import. This should be only set if the value differs from "Import target XWiki name" or ,for bridges, to specify what the bridge uses and what to use in XWiki natively. Several values can be provided.</hint>
       <largeStorage>0</largeStorage>
       <multiSelect>1</multiSelect>
       <name>equivXWikiFeatureName</name>
-      <number>22</number>
+      <number>21</number>
       <picker>1</picker>
       <prettyName>Alternative XWiki feature name</prettyName>
       <relationalStorage>0</relationalStorage>
@@ -163,7 +163,7 @@
       <disabled>0</disabled>
       <displayType>input</displayType>
       <freeText/>
-      <hint>The documentation of a feature that should be used in XWiki for this feature regardless of the import. This should be only set if the value differs from "Import target XWiki URL" or for bridges to specify what the bridge uses and what to use in XWiki natively.</hint>
+      <hint>The documentation page of the feature that should be used in XWiki for this feature regardless of the import. This should be only set if the value differs from "Import target XWiki URL" or for bridges to specify what the bridge uses and what to use in XWiki natively. Several values can be provided.</hint>
       <idField/>
       <largeStorage>0</largeStorage>
       <multiSelect>1</multiSelect>
@@ -190,7 +190,7 @@
       <disabled>0</disabled>
       <displayType>input</displayType>
       <freeText>allowed</freeText>
-      <hint>The anchor in the documentation of a feature that should be used in XWiki for this feature regardless of the import.</hint>
+      <hint>The anchor in the documentation page of the feature that should be used in XWiki for this feature regardless of the import. Several values can be provided, corresponding to the documentation pages.</hint>
       <largeStorage>0</largeStorage>
       <multiSelect>1</multiSelect>
       <name>equivXWikiFeaturePageAnchor</name>
@@ -215,7 +215,7 @@
       <disabled>0</disabled>
       <displayType>input</displayType>
       <freeText>allowed</freeText>
-      <hint>The URL to the feature that should be used in XWiki for this feature regardless of the import. This should be only set if the value differs from "Import target XWiki URL" or for bridges to specify what the bridge uses and what to use in XWiki natively. You can give several comma-separated URLs.</hint>
+      <hint>The URL to documentation of the feature that should be used in XWiki for this feature regardless of the import. This should be only set if the value differs from "Import target XWiki URL" or for bridges to specify what the bridge uses and what to use in XWiki natively. Several values can be provided.</hint>
       <largeStorage>0</largeStorage>
       <multiSelect>1</multiSelect>
       <name>equivXWikiFeatureURL</name>
@@ -240,13 +240,13 @@
       <disabled>0</disabled>
       <displayType>select</displayType>
       <freeText/>
-      <hint>How well the alternative feature in XWiki is equivalent to the Confluence feature. If the alternative XWiki feature brings the same features with no important limitations, we consider  full equivalence. If equivalent features lack or have limitations, depending on the situation, we consider partial equivalence.</hint>
+      <hint>How well the alternative feature in XWiki is covering the Confluence feature provided by this macro. If the alternative XWiki feature brings the same features with no important limitations, we consider full coverage. If equivalent features lack or have limitations, depending on the situation, we consider partial equivalence.</hint>
       <largeStorage>0</largeStorage>
       <multiSelect>0</multiSelect>
       <name>functionalEquivalenceQualifier</name>
       <number>27</number>
       <picker>1</picker>
-      <prettyName>Functional Equivalence Qualifier</prettyName>
+      <prettyName>Is the alternative XWiki feature fully covering the feature?</prettyName>
       <relationalStorage>0</relationalStorage>
       <separator>, </separator>
       <separators>|, </separators>
@@ -265,7 +265,7 @@
       <disabled>0</disabled>
       <displayType>select</displayType>
       <freeText/>
-      <hint>There are different ways to import and handle Confluence macros in XWiki. This hints at how the macro looks like after a migration to XWiki.</hint>
+      <hint>There are different ways to import and handle Confluence macros in XWiki. This hints at what is happening with the Confluence macro upon migration to XWiki.</hint>
       <largeStorage>0</largeStorage>
       <multiSelect>0</multiSelect>
       <name>handling</name>
@@ -288,13 +288,13 @@
       <customDisplay/>
       <disabled>0</disabled>
       <editor>---</editor>
-      <hint>Details on how (well) this Confluence macro is imported</hint>
+      <hint>Details on how this Confluence macro is imported into its XWiki equivalent / alternative (parameters or content conversion, usage conversion).</hint>
       <name>handlingDetails</name>
-      <number>29</number>
+      <number>28</number>
       <picker>0</picker>
       <prettyName>Import handling details</prettyName>
       <restricted>0</restricted>
-      <rows>5</rows>
+      <rows>15</rows>
       <size>40</size>
       <unmodifiable>0</unmodifiable>
       <validationMessage/>
@@ -312,9 +312,9 @@
       <largeStorage>0</largeStorage>
       <multiSelect>0</multiSelect>
       <name>importSupportQualifier</name>
-      <number>8</number>
+      <number>10</number>
       <picker>1</picker>
-      <prettyName>Import Quality Qualifier</prettyName>
+      <prettyName>Is the macro fully imported in XWiki?</prettyName>
       <relationalStorage>0</relationalStorage>
       <separator> </separator>
       <separators>|, </separators>
@@ -331,7 +331,7 @@
       <disabled>0</disabled>
       <hint>The user-friendly macro name as it is presented in Confluence (different from the confluence ID which is the technical name)</hint>
       <name>prettyName</name>
-      <number>1</number>
+      <number>2</number>
       <prettyName>User-friendly macro name</prettyName>
       <script/>
       <unmodifiable>0</unmodifiable>
@@ -346,11 +346,11 @@
       <disabled>0</disabled>
       <displayType>input</displayType>
       <freeText>allowed</freeText>
-      <hint>URL to an extension required for importing this macro. You can give several comma-separated URLs.</hint>
+      <hint>URL to the documentation of the extension required for importing this Confluence macro into XWiki.</hint>
       <largeStorage>0</largeStorage>
       <multiSelect>1</multiSelect>
       <name>requiredForImport</name>
-      <number>15</number>
+      <number>20</number>
       <picker>1</picker>
       <prettyName>Required for import documentation URL</prettyName>
       <relationalStorage>0</relationalStorage>
@@ -371,11 +371,11 @@
       <disabled>0</disabled>
       <displayType>input</displayType>
       <freeText>allowed</freeText>
-      <hint>ID of an extension required for importing this macro. You can give several comma-separated IDs.</hint>
+      <hint>The ID of the extension required for importing this Confluence macro into XWiki.</hint>
       <largeStorage>0</largeStorage>
       <multiSelect>1</multiSelect>
       <name>requiredForImportId</name>
-      <number>11</number>
+      <number>16</number>
       <picker>1</picker>
       <prettyName>Required for import extension ID</prettyName>
       <relationalStorage>0</relationalStorage>
@@ -396,13 +396,13 @@
       <disabled>0</disabled>
       <displayType>input</displayType>
       <freeText>allowed</freeText>
-      <hint>User-friendly name of the extension required for importing the macro. You can give several comma-separated names.</hint>
+      <hint>The user-friendly name of the extension required for importing this Confluence macro into XWiki.</hint>
       <largeStorage>0</largeStorage>
       <multiSelect>1</multiSelect>
       <name>requiredForImportName</name>
-      <number>12</number>
+      <number>17</number>
       <picker>1</picker>
-      <prettyName> Required for import extension name</prettyName>
+      <prettyName>Required for import extension name</prettyName>
       <relationalStorage>0</relationalStorage>
       <separator>, </separator>
       <separators>, |</separators>
@@ -422,12 +422,12 @@
       <disabled>0</disabled>
       <displayType>input</displayType>
       <freeText/>
-      <hint>Page of an extension required for importing this macro.</hint>
+      <hint>Documentation page of the extension required for importing this Confluence macro into XWiki.</hint>
       <idField/>
       <largeStorage>0</largeStorage>
       <multiSelect>1</multiSelect>
       <name>requiredForImportPage</name>
-      <number>13</number>
+      <number>18</number>
       <picker>1</picker>
       <prettyName>Required for import documentation page</prettyName>
       <relationalStorage>0</relationalStorage>
@@ -449,11 +449,11 @@
       <disabled>0</disabled>
       <displayType>input</displayType>
       <freeText>allowed</freeText>
-      <hint>Anchor in the page of an extension required for importing this macro.</hint>
+      <hint>Anchor in the documentation page of the extension required for importing this Confluence macro into XWiki.</hint>
       <largeStorage>0</largeStorage>
       <multiSelect>1</multiSelect>
       <name>requiredForImportPageAnchor</name>
-      <number>14</number>
+      <number>19</number>
       <picker>1</picker>
       <prettyName>Required for import documentation page anchor</prettyName>
       <relationalStorage>0</relationalStorage>
@@ -474,11 +474,11 @@
       <disabled>0</disabled>
       <displayType>input</displayType>
       <freeText>allowed</freeText>
-      <hint>URL to the documentation of a extension required for using the imported macro. You can give several comma-separated URLs.</hint>
+      <hint>URL to the documentation of the extension required for using the import target XWiki macro. Several values can be provided (that need to correspond the extension ids).</hint>
       <largeStorage>0</largeStorage>
       <multiSelect>1</multiSelect>
       <name>requiredForUsage</name>
-      <number>20</number>
+      <number>15</number>
       <picker>1</picker>
       <prettyName>Required for usage documentation URL</prettyName>
       <relationalStorage>0</relationalStorage>
@@ -499,11 +499,11 @@
       <disabled>0</disabled>
       <displayType>input</displayType>
       <freeText/>
-      <hint>ID of an extension required for using this macro. You can give several comma-separated IDs.</hint>
+      <hint>ID of the extension required for using the import target XWiki macro. Several values can be provided.</hint>
       <largeStorage>0</largeStorage>
       <multiSelect>1</multiSelect>
       <name>requiredForUsageId</name>
-      <number>16</number>
+      <number>11</number>
       <picker>1</picker>
       <prettyName>Required for usage extension ID</prettyName>
       <relationalStorage>0</relationalStorage>
@@ -524,11 +524,11 @@
       <disabled>0</disabled>
       <displayType>input</displayType>
       <freeText/>
-      <hint>Name of an extension required for using this macro. You can give several comma-separated names.</hint>
+      <hint>User-friendly name of the extension required for using the import target XWiki macro. Several values can be provided (that need to correspond the extension ids).</hint>
       <largeStorage>0</largeStorage>
       <multiSelect>1</multiSelect>
       <name>requiredForUsageName</name>
-      <number>17</number>
+      <number>12</number>
       <picker>1</picker>
       <prettyName>Required for usage extension name</prettyName>
       <relationalStorage>0</relationalStorage>
@@ -550,12 +550,12 @@
       <disabled>0</disabled>
       <displayType>input</displayType>
       <freeText/>
-      <hint>Documentation page of an extension required for using this macro.</hint>
+      <hint>Documentation page of the extension required for using the import target XWiki macro. Several values can be provided (that need to correspond the extension ids).</hint>
       <idField/>
       <largeStorage>0</largeStorage>
       <multiSelect>1</multiSelect>
       <name>requiredForUsagePage</name>
-      <number>18</number>
+      <number>13</number>
       <picker>1</picker>
       <prettyName>Required for usage documentation page</prettyName>
       <relationalStorage>0</relationalStorage>
@@ -577,11 +577,11 @@
       <disabled>0</disabled>
       <displayType>input</displayType>
       <freeText>allowed</freeText>
-      <hint>Documentation page anchor of an extension required for using this macro.</hint>
+      <hint>Anchor in the documentation page of the extension required for using the import target XWiki macro. Several values can be provided (that need to correspond the documentation pages).</hint>
       <largeStorage>0</largeStorage>
       <multiSelect>1</multiSelect>
       <name>requiredForUsagePageAnchor</name>
-      <number>19</number>
+      <number>14</number>
       <picker>1</picker>
       <prettyName>Required for usage documentation page anchor</prettyName>
       <relationalStorage>0</relationalStorage>
@@ -602,11 +602,11 @@
       <disabled>0</disabled>
       <displayType>input</displayType>
       <freeText>allowed</freeText>
-      <hint>The import target macro, if applicable. You can give several comma-separated macros.</hint>
+      <hint>The id of the import target XWiki macro, if applicable. Several values can be provided.</hint>
       <largeStorage>0</largeStorage>
       <multiSelect>1</multiSelect>
       <name>xwikiId</name>
-      <number>9</number>
+      <number>5</number>
       <picker>1</picker>
       <prettyName>Import target XWiki ID</prettyName>
       <relationalStorage>0</relationalStorage>
@@ -627,11 +627,11 @@
       <disabled>0</disabled>
       <displayType>input</displayType>
       <freeText>allowed</freeText>
-      <hint>The (user-friendly) name of the import target, if applicable. You can give several comma-separated names.</hint>
+      <hint>The user-friendly macro name as it is presented in XWiki (different from the XWiki  ID which is the technical name, but corresponding to an XWiki macro id). Several values can be provided.</hint>
       <largeStorage>0</largeStorage>
       <multiSelect>1</multiSelect>
       <name>xwikiName</name>
-      <number>5</number>
+      <number>6</number>
       <picker>1</picker>
       <prettyName>Import target XWiki name</prettyName>
       <relationalStorage>0</relationalStorage>
@@ -653,14 +653,14 @@
       <disabled>0</disabled>
       <displayType>input</displayType>
       <freeText/>
-      <hint>The import target macro documentation, if applicable.</hint>
+      <hint>Documentation page of the import target macro, if applicable. Several values can be provided.</hint>
       <idField/>
       <largeStorage>0</largeStorage>
       <multiSelect>1</multiSelect>
       <name>xwikiPage</name>
-      <number>10</number>
+      <number>7</number>
       <picker>1</picker>
-      <prettyName>Import target XWiki page</prettyName>
+      <prettyName>Import target documentation page</prettyName>
       <relationalStorage>0</relationalStorage>
       <separator>, </separator>
       <separators/>
@@ -680,13 +680,13 @@
       <disabled>0</disabled>
       <displayType>input</displayType>
       <freeText>allowed</freeText>
-      <hint>The anchor in the import target macro documentation, if applicable.</hint>
+      <hint>Anchor in the documentation page of the import target macro, if applicable. Several values can be provided.</hint>
       <largeStorage>0</largeStorage>
       <multiSelect>1</multiSelect>
       <name>xwikiPageAnchor</name>
-      <number>6</number>
+      <number>8</number>
       <picker>1</picker>
-      <prettyName>Import target XWiki page anchor</prettyName>
+      <prettyName>Import target documentation page anchor</prettyName>
       <relationalStorage>0</relationalStorage>
       <separator>, </separator>
       <separators>, |</separators>
@@ -705,13 +705,13 @@
       <disabled>0</disabled>
       <displayType>input</displayType>
       <freeText>allowed</freeText>
-      <hint>The import target macro documentation URL, if applicable. You can give several comma-separated URLs.</hint>
+      <hint>URL to the documentation of the import target macro, if applicable. Several values can be provided.</hint>
       <largeStorage>0</largeStorage>
       <multiSelect>1</multiSelect>
       <name>xwikiURL</name>
-      <number>7</number>
+      <number>9</number>
       <picker>1</picker>
-      <prettyName>Import target XWiki URL</prettyName>
+      <prettyName>Import target documentation URL</prettyName>
       <relationalStorage>0</relationalStorage>
       <separator>, </separator>
       <separators>, |</separators>

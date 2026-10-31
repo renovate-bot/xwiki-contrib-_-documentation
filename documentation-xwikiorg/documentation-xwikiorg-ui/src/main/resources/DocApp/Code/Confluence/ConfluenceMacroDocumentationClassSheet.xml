@@ -172,27 +172,45 @@
     &lt;fieldset class="confluenceMacroDocUrl"&gt;
       &lt;legend&gt;$macro.pageProperty.prettyName.replace(' page', '')&lt;/legend&gt;
       &lt;dl&gt;
-        &lt;dt class="confluenceMacroDocExtensionId"&gt;
-          &lt;label for="${class.name}_0_${macro.extensionIdProperty.name}"&gt;$macro.extensionIdProperty.prettyName&lt;/label&gt;
-          &lt;span class="xHint"&gt;$!macro.extensionIdProperty.hint&lt;/span&gt;
-        &lt;/dt&gt;
-        &lt;dd class="confluenceMacroDocExtensionId"&gt;
-          {{/html}}$doc.display($extensionIdPropertyName){{html clean="false"}}
-        &lt;/dd&gt;
-        &lt;dt class="confluenceMacroDocExtensionName"&gt;
-          &lt;label for="${class.name}_0_${macro.extensionNameProperty.name}"&gt;$macro.extensionNameProperty.prettyName&lt;/label&gt;
-          &lt;span class="xHint"&gt;$!macro.extensionNameProperty.hint&lt;/span&gt;
-        &lt;/dt&gt;
-        &lt;dd class="confluenceMacroDocExtensionId"&gt;
-          {{/html}}$doc.display($extensionNamePropertyName){{html clean="false"}}
-        &lt;/dd&gt;
+        #if($extensionNamePropertyName == 'equivXWikiFeatureName')
+          ## for the alternative metadata, we render name before extension id, as it may not always be an extension, it could be a syntax feature, for example, or other
+          &lt;dt class="confluenceMacroDocExtensionName"&gt;
+            &lt;label for="${class.name}_0_${macro.extensionNameProperty.name}"&gt;$macro.extensionNameProperty.prettyName&lt;/label&gt;
+            &lt;span class="xHint"&gt;$!macro.extensionNameProperty.hint&lt;/span&gt;
+          &lt;/dt&gt;
+          &lt;dd class="confluenceMacroDocExtensionId"&gt;
+            {{/html}}$doc.display($extensionNamePropertyName){{html clean="false"}}
+          &lt;/dd&gt;
+          &lt;dt class="confluenceMacroDocExtensionId"&gt;
+            &lt;label for="${class.name}_0_${macro.extensionIdProperty.name}"&gt;$macro.extensionIdProperty.prettyName&lt;/label&gt;
+            &lt;span class="xHint"&gt;$!macro.extensionIdProperty.hint&lt;/span&gt;
+          &lt;/dt&gt;
+          &lt;dd class="confluenceMacroDocExtensionId"&gt;
+            {{/html}}$doc.display($extensionIdPropertyName){{html clean="false"}}
+          &lt;/dd&gt;
+        #else
+          &lt;dt class="confluenceMacroDocExtensionId"&gt;
+            &lt;label for="${class.name}_0_${macro.extensionIdProperty.name}"&gt;$macro.extensionIdProperty.prettyName&lt;/label&gt;
+            &lt;span class="xHint"&gt;$!macro.extensionIdProperty.hint&lt;/span&gt;
+          &lt;/dt&gt;
+          &lt;dd class="confluenceMacroDocExtensionId"&gt;
+            {{/html}}$doc.display($extensionIdPropertyName){{html clean="false"}}
+          &lt;/dd&gt;
+          &lt;dt class="confluenceMacroDocExtensionName"&gt;
+            &lt;label for="${class.name}_0_${macro.extensionNameProperty.name}"&gt;$macro.extensionNameProperty.prettyName&lt;/label&gt;
+            &lt;span class="xHint"&gt;$!macro.extensionNameProperty.hint&lt;/span&gt;
+          &lt;/dt&gt;
+          &lt;dd class="confluenceMacroDocExtensionId"&gt;
+            {{/html}}$doc.display($extensionNamePropertyName){{html clean="false"}}
+          &lt;/dd&gt;
+        #end
       &lt;/dl&gt;
       &lt;hr /&gt;
       &lt;dl class="confluenceMacroDocPage"&gt;
         &lt;dt class="confluenceMacroDocPageRef"&gt;
           &lt;label for="${class.name}_0_${macro.pageProperty.name}"&gt;$macro.pageProperty.prettyName&lt;/label&gt;
           &lt;span class="xHint"&gt;$!macro.pageProperty.hint&lt;/span&gt;
-          &lt;span class="xHint"&gt;Use this field if the document to link is on this XWiki instance.&lt;/span&gt;
+          &lt;span class="xHint"&gt;Use this field if the documentation to link to is on this XWiki instance.&lt;/span&gt;
         &lt;/dt&gt;
         &lt;dd class="confluenceMacroDocPageRef"&gt;
           {{/html}}$doc.display($pagePropertyName){{html clean="false"}}
@@ -200,7 +218,7 @@
         &lt;dt class="confluenceMacroDocPageAnchor"&gt;
           &lt;label for="${class.name}_0_${macro.pageAnchorProperty.name}"&gt;$macro.pageAnchorProperty.prettyName&lt;/label&gt;
           &lt;span class="xHint"&gt;$!macro.pageAnchorProperty.hint&lt;/span&gt;
-          &lt;span class="xHint"&gt;Should be in addition to the page reference to have the section of the page.&lt;/span&gt;
+          &lt;span class="xHint"&gt;Use this in addition to the page reference, to point to a section of the page.&lt;/span&gt;
         &lt;/dt&gt;
         &lt;dd class="confluenceMacroDocPageAnchor"&gt;
           {{/html}}$doc.display($pageAnchorPropertyName){{html clean="false"}}
@@ -211,7 +229,7 @@
         &lt;dt&gt;
           &lt;label for="${class.name}_0_${macro.urlProperty.name}"&gt;$macro.urlProperty.prettyName&lt;/label&gt;
           &lt;span class="xHint"&gt;$!macro.urlProperty.hint&lt;/span&gt;
-          &lt;span class="xHint"&gt;This is mutually exclusive with the target XWiki page and target XWiki page anchor.&lt;/span&gt;
+          &lt;span class="xHint"&gt;This is mutually exclusive with the documentation page and documentation page anchor.&lt;/span&gt;
         &lt;/dt&gt;
         &lt;dd&gt;
           {{/html}}$doc.display($urlPropertyName){{html clean="false"}}
