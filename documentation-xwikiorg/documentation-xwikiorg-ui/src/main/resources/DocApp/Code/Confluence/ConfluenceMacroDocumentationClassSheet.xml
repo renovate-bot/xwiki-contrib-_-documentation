@@ -172,7 +172,7 @@
     &lt;fieldset class="confluenceMacroDocUrl"&gt;
       &lt;legend&gt;$macro.pageProperty.prettyName.replace(' page', '')&lt;/legend&gt;
       &lt;dl&gt;
-        #if($extensionNamePropertyName == 'equivXWikiFeatureName')
+        #if ($extensionNamePropertyName == 'equivXWikiFeatureName')
           ## for the alternative metadata, we render name before extension id, as it may not always be an extension, it could be a syntax feature, for example, or other
           &lt;dt class="confluenceMacroDocExtensionName"&gt;
             &lt;label for="${class.name}_0_${macro.extensionNameProperty.name}"&gt;$macro.extensionNameProperty.prettyName&lt;/label&gt;
