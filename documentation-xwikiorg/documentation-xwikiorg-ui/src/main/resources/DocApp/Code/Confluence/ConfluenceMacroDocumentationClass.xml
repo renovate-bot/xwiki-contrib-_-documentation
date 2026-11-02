@@ -340,79 +340,46 @@
       <classType>com.xpn.xwiki.objects.classes.ComputedFieldClass</classType>
     </prettyName>
     <requiredForImport>
-      <cache>0</cache>
       <customDisplay/>
-      <defaultValue/>
       <disabled>0</disabled>
-      <displayType>input</displayType>
-      <freeText>allowed</freeText>
       <hint>URL to the documentation of the extension required for importing this Confluence macro into XWiki.</hint>
-      <largeStorage>0</largeStorage>
-      <multiSelect>1</multiSelect>
       <name>requiredForImport</name>
       <number>20</number>
-      <picker>1</picker>
+      <picker>0</picker>
       <prettyName>Required for import documentation URL</prettyName>
-      <relationalStorage>0</relationalStorage>
-      <separator>, </separator>
-      <separators>, |</separators>
-      <size>1</size>
-      <sort/>
+      <size>30</size>
       <unmodifiable>0</unmodifiable>
       <validationMessage/>
       <validationRegExp/>
-      <values/>
-      <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+      <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
     </requiredForImport>
     <requiredForImportId>
-      <cache>0</cache>
       <customDisplay/>
-      <defaultValue/>
       <disabled>0</disabled>
-      <displayType>input</displayType>
-      <freeText>allowed</freeText>
       <hint>The ID of the extension required for importing this Confluence macro into XWiki.</hint>
-      <largeStorage>0</largeStorage>
-      <multiSelect>1</multiSelect>
       <name>requiredForImportId</name>
       <number>16</number>
       <picker>1</picker>
       <prettyName>Required for import extension ID</prettyName>
-      <relationalStorage>0</relationalStorage>
-      <separator>, </separator>
-      <separators>, |</separators>
-      <size>1</size>
-      <sort/>
+      <size>30</size>
       <unmodifiable>0</unmodifiable>
       <validationMessage/>
       <validationRegExp/>
-      <values/>
-      <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+      <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
     </requiredForImportId>
     <requiredForImportName>
-      <cache>0</cache>
       <customDisplay/>
-      <defaultValue/>
       <disabled>0</disabled>
-      <displayType>input</displayType>
-      <freeText>allowed</freeText>
       <hint>The user-friendly name of the extension required for importing this Confluence macro into XWiki.</hint>
-      <largeStorage>0</largeStorage>
-      <multiSelect>1</multiSelect>
       <name>requiredForImportName</name>
       <number>17</number>
       <picker>1</picker>
       <prettyName>Required for import extension name</prettyName>
-      <relationalStorage>0</relationalStorage>
-      <separator>, </separator>
-      <separators>, |</separators>
-      <size>1</size>
-      <sort/>
+      <size>30</size>
       <unmodifiable>0</unmodifiable>
       <validationMessage/>
       <validationRegExp/>
-      <values/>
-      <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+      <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
     </requiredForImportName>
     <requiredForImportPage>
       <cache>0</cache>
@@ -425,7 +392,7 @@
       <hint>Documentation page of the extension required for importing this Confluence macro into XWiki.</hint>
       <idField/>
       <largeStorage>0</largeStorage>
-      <multiSelect>1</multiSelect>
+      <multiSelect>0</multiSelect>
       <name>requiredForImportPage</name>
       <number>18</number>
       <picker>1</picker>
@@ -443,29 +410,18 @@
       <classType>com.xpn.xwiki.objects.classes.PageClass</classType>
     </requiredForImportPage>
     <requiredForImportPageAnchor>
-      <cache>0</cache>
       <customDisplay/>
-      <defaultValue/>
       <disabled>0</disabled>
-      <displayType>input</displayType>
-      <freeText>allowed</freeText>
       <hint>Anchor in the documentation page of the extension required for importing this Confluence macro into XWiki.</hint>
-      <largeStorage>0</largeStorage>
-      <multiSelect>1</multiSelect>
       <name>requiredForImportPageAnchor</name>
       <number>19</number>
       <picker>1</picker>
       <prettyName>Required for import documentation page anchor</prettyName>
-      <relationalStorage>0</relationalStorage>
-      <separator>, </separator>
-      <separators>, |</separators>
-      <size>1</size>
-      <sort/>
+      <size>30</size>
       <unmodifiable>0</unmodifiable>
       <validationMessage/>
       <validationRegExp/>
-      <values/>
-      <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+      <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
     </requiredForImportPageAnchor>
     <requiredForUsage>
       <cache>0</cache>
