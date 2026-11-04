@@ -1,0 +1,87 @@
+<?xml version="1.1" encoding="UTF-8"?>
+
+<!--
+ * See the NOTICE file distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ *
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+-->
+
+<xwikidoc version="1.7" reference="DocApp.Code.Confluence.ComputedURLField" locale="">
+  <web>DocApp.Code.Confluence</web>
+  <name>ComputedURLField</name>
+  <language/>
+  <defaultLanguage/>
+  <translation>0</translation>
+  <creator>xwiki:XWiki.Admin</creator>
+  <parent>WebHome</parent>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
+  <version>1.1</version>
+  <title>ComputedURLField</title>
+  <comment/>
+  <minorEdit>false</minorEdit>
+  <syntaxId>xwiki/2.1</syntaxId>
+  <hidden>true</hidden>
+  <content>{{velocity}}
+#macro (computedConfluenceURLField $pageFieldName $pageAnchorFieldName $urlFieldName)
+  #set ($res = [])
+  #set ($urls = $doc.getValue($urlFieldName))
+  #if ($objecttool.isNotNull($urls))
+    #if ($urls.class.name == 'String')
+      #if ("$!urls" != "")
+        #set ($discard = $res.add($urls))
+      #end
+    #else
+      #set ($discard = $res.addAll($urls))
+    #end
+  #end
+  #set ($pages = $doc.getValue($pageFieldName))
+  #if ($objecttool.isNull($pages))
+    #set ($pages = [])
+  #end
+  #set ($pageAnchors = $doc.getValue($pageAnchorFieldName))
+  #if ($objecttool.isNull($pageAnchors))
+    #set ($pageAnchors = [])
+  #end
+  #if ($pages.class.name == 'java.lang.String')
+    #set ($pages = [$pages])
+  #end
+  #if ($pageAnchors.class.name == 'java.lang.String')
+    #set ($pageAnchors = [$pageAnchors])
+  #end
+  #set ($n = $pages.size() - 1)
+  #if ($n &gt;= 0)
+    #foreach ($index in [0..$n])
+      #set ($page = $pages.get($index))
+      #if ("$!page" != "")
+        #set ($pageAnchor = "")
+        #if ($index &lt; $pageAnchors.size())
+          #set ($pageAnchor = $pageAnchors.get($index))
+        #end
+        #if ("$!pageAnchor" == "")
+          #set ($anchor = "")
+        #else
+          #set ($anchor = "#" + $pageAnchor)
+        #end
+        #set ($discard = $res.add($xwiki.getURL($page) + $anchor))
+      #end
+    #end
+  #end
+  $services.rendering.escape($jsontool.serialize($res), 'xwiki/2.1')
+#end
+{{/velocity}}</content>
+</xwikidoc>

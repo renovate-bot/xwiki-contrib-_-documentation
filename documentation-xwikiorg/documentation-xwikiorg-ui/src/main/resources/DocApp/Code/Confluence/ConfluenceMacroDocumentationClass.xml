@@ -59,6 +59,74 @@
       <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.ComputedFieldClass</classType>
     </additionalInfo>
+    <computedEquivXWikiFeatureURL>
+      <customDisplay>{{include reference="DocApp.Code.Confluence.ComputedURLField"/}}
+
+{{velocity}}
+#computedConfluenceURLField('equivXWikiFeaturePage', 'equivXWikiFeaturePageAnchor', 'equivXWikiFeatureURL')
+{{/velocity}}</customDisplay>
+      <disabled>0</disabled>
+      <hint/>
+      <name>computedEquivXWikiFeatureURL</name>
+      <number>33</number>
+      <prettyName>computedEquivXWikiFeatureURL</prettyName>
+      <script/>
+      <unmodifiable>0</unmodifiable>
+      <validationMessage/>
+      <validationRegExp/>
+      <classType>com.xpn.xwiki.objects.classes.ComputedFieldClass</classType>
+    </computedEquivXWikiFeatureURL>
+    <computedRequiredForImportURL>
+      <customDisplay>{{include reference="DocApp.Code.Confluence.ComputedURLField"/}}
+
+{{velocity}}
+#computedConfluenceURLField('requiredForImportPage', 'requiredForImportPageAnchor', 'requiredForImport')
+{{/velocity}}</customDisplay>
+      <disabled>0</disabled>
+      <hint/>
+      <name>computedRequiredForImportURL</name>
+      <number>32</number>
+      <prettyName>computedRequiredForImportURL</prettyName>
+      <script/>
+      <unmodifiable>0</unmodifiable>
+      <validationMessage/>
+      <validationRegExp/>
+      <classType>com.xpn.xwiki.objects.classes.ComputedFieldClass</classType>
+    </computedRequiredForImportURL>
+    <computedRequiredForUsageURL>
+      <customDisplay>{{include reference="DocApp.Code.Confluence.ComputedURLField"/}}
+
+{{velocity}}
+#computedConfluenceURLField('requiredForUsagePage', 'requiredForUsagePageAnchor', 'requiredForUsage')
+{{/velocity}}</customDisplay>
+      <disabled>0</disabled>
+      <hint/>
+      <name>computedRequiredForUsageURL</name>
+      <number>31</number>
+      <prettyName>computedRequiredForUsageURL</prettyName>
+      <script/>
+      <unmodifiable>0</unmodifiable>
+      <validationMessage/>
+      <validationRegExp/>
+      <classType>com.xpn.xwiki.objects.classes.ComputedFieldClass</classType>
+    </computedRequiredForUsageURL>
+    <computedXWikiURL>
+      <customDisplay>{{include reference="DocApp.Code.Confluence.ComputedURLField"/}}
+
+{{velocity}}
+#computedConfluenceURLField('xwikiPage', 'xwikiPageAnchor', 'xwikiURL')
+{{/velocity}}</customDisplay>
+      <disabled>0</disabled>
+      <hint/>
+      <name>computedXWikiURL</name>
+      <number>30</number>
+      <prettyName>computedXWikiURL</prettyName>
+      <script/>
+      <unmodifiable>0</unmodifiable>
+      <validationMessage/>
+      <validationRegExp/>
+      <classType>com.xpn.xwiki.objects.classes.ComputedFieldClass</classType>
+    </computedXWikiURL>
     <confluenceId>
       <customDisplay/>
       <disabled>0</disabled>
