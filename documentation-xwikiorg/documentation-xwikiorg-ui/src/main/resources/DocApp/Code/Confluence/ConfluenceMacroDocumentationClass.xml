@@ -119,7 +119,7 @@
       <number>22</number>
       <picker>1</picker>
       <prettyName>Alternative XWiki feature extension ID</prettyName>
-      <relationalStorage>0</relationalStorage>
+      <relationalStorage>1</relationalStorage>
       <separator>, </separator>
       <separators>, |</separators>
       <size>1</size>
@@ -144,7 +144,7 @@
       <number>21</number>
       <picker>1</picker>
       <prettyName>Alternative XWiki feature name</prettyName>
-      <relationalStorage>0</relationalStorage>
+      <relationalStorage>1</relationalStorage>
       <separator>, </separator>
       <separators>, |</separators>
       <size>1</size>
@@ -171,7 +171,7 @@
       <number>23</number>
       <picker>1</picker>
       <prettyName>Alternative XWiki feature documentation page</prettyName>
-      <relationalStorage>0</relationalStorage>
+      <relationalStorage>1</relationalStorage>
       <separator>, </separator>
       <separators/>
       <size>1</size>
@@ -197,7 +197,7 @@
       <number>24</number>
       <picker>1</picker>
       <prettyName>Alternative XWiki feature documentation page anchor</prettyName>
-      <relationalStorage>0</relationalStorage>
+      <relationalStorage>1</relationalStorage>
       <separator>, </separator>
       <separators>, |</separators>
       <size>1</size>
@@ -222,7 +222,7 @@
       <number>25</number>
       <picker>1</picker>
       <prettyName>Alternative XWiki feature documentation URL</prettyName>
-      <relationalStorage>0</relationalStorage>
+      <relationalStorage>1</relationalStorage>
       <separator>, </separator>
       <separators>, |</separators>
       <size>1</size>
@@ -437,7 +437,7 @@
       <number>15</number>
       <picker>1</picker>
       <prettyName>Required for usage documentation URL</prettyName>
-      <relationalStorage>0</relationalStorage>
+      <relationalStorage>1</relationalStorage>
       <separator>, </separator>
       <separators>, |</separators>
       <size>1</size>
@@ -462,7 +462,7 @@
       <number>11</number>
       <picker>1</picker>
       <prettyName>Required for usage extension ID</prettyName>
-      <relationalStorage>0</relationalStorage>
+      <relationalStorage>1</relationalStorage>
       <separator>, </separator>
       <separators>, |</separators>
       <size>1</size>
@@ -487,7 +487,7 @@
       <number>12</number>
       <picker>1</picker>
       <prettyName>Required for usage extension name</prettyName>
-      <relationalStorage>0</relationalStorage>
+      <relationalStorage>1</relationalStorage>
       <separator>, </separator>
       <separators>, |</separators>
       <size>1</size>
@@ -514,7 +514,7 @@
       <number>13</number>
       <picker>1</picker>
       <prettyName>Required for usage documentation page</prettyName>
-      <relationalStorage>0</relationalStorage>
+      <relationalStorage>1</relationalStorage>
       <separator>, </separator>
       <separators/>
       <size>28</size>
@@ -540,7 +540,7 @@
       <number>14</number>
       <picker>1</picker>
       <prettyName>Required for usage documentation page anchor</prettyName>
-      <relationalStorage>0</relationalStorage>
+      <relationalStorage>1</relationalStorage>
       <separator>, </separator>
       <separators>, |</separators>
       <size>1</size>
@@ -565,7 +565,7 @@
       <number>5</number>
       <picker>1</picker>
       <prettyName>Import target XWiki ID</prettyName>
-      <relationalStorage>0</relationalStorage>
+      <relationalStorage>1</relationalStorage>
       <separator>, </separator>
       <separators>, |</separators>
       <size>1</size>
@@ -590,7 +590,7 @@
       <number>6</number>
       <picker>1</picker>
       <prettyName>Import target XWiki name</prettyName>
-      <relationalStorage>0</relationalStorage>
+      <relationalStorage>1</relationalStorage>
       <separator>, </separator>
       <separators>, |</separators>
       <size>1</size>
@@ -617,7 +617,7 @@
       <number>7</number>
       <picker>1</picker>
       <prettyName>Import target documentation page</prettyName>
-      <relationalStorage>0</relationalStorage>
+      <relationalStorage>1</relationalStorage>
       <separator>, </separator>
       <separators/>
       <size>1</size>
@@ -643,7 +643,7 @@
       <number>8</number>
       <picker>1</picker>
       <prettyName>Import target documentation page anchor</prettyName>
-      <relationalStorage>0</relationalStorage>
+      <relationalStorage>1</relationalStorage>
       <separator>, </separator>
       <separators>, |</separators>
       <size>1</size>
@@ -668,7 +668,7 @@
       <number>9</number>
       <picker>1</picker>
       <prettyName>Import target documentation URL</prettyName>
-      <relationalStorage>0</relationalStorage>
+      <relationalStorage>1</relationalStorage>
       <separator>, </separator>
       <separators>, |</separators>
       <size>1</size>
